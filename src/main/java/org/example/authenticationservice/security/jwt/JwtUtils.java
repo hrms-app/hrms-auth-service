@@ -49,15 +49,6 @@ public class JwtUtils {
                 .compact();
     }
 
-    public String generateRefreshToken(String username) {
-        return Jwts.builder()
-                .setSubject(username)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + refreshExpiration))
-                .signWith(SignatureAlgorithm.HS512, secret)
-                .compact();
-    }
-
     // kiểm tra tính hợp lệ của token
     public boolean validateToken(String token) {
         try {
