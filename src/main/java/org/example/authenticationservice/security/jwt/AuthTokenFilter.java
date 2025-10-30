@@ -1,3 +1,4 @@
+/*
 package org.example.authenticationservice.security.jwt;
 
 import org.example.authenticationservice.security.UserDetailsServiceImpl;
@@ -29,7 +30,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
         // Bỏ qua các endpoint public
         String path = req.getRequestURI();
-        if (path.startsWith("/api/auth/")) {
+        if (path.startsWith("/auth/") || path.startsWith("/api/auth/"))) {
             chain.doFilter(req, res);
             return;
         }
@@ -68,3 +69,4 @@ public class AuthTokenFilter extends OncePerRequestFilter {
         chain.doFilter(req, res);
     }
 }
+*/

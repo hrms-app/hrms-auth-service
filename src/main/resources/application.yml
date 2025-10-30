@@ -16,13 +16,18 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  application:
+    name: auth-service
 
 jwt:
   secret: VCdIfy/7V9LwRY9RzWYoi5dT+WWYSQJZzrP4gypSlWRpYg94KX/3SCnQEM2GHZN2Yr9r5JNaWci/lMCGvXNDrQ==
   expirationMs: 1800000 # 30 minutes
   refreshExpirationMs: 604800000 # 7 days
 
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 logging:
   level:
